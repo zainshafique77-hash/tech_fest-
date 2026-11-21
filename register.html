@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | TechFest 2026</title>
+  <meta name="description" content="Register for TechFest 2026 events with your university email and registration number.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">TechFest 2026</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="register.html" aria-current="page">Register</a></li>
+          <li><a href="events.html">&#9733; <span id="saved-count">0</span><span class="visually-hidden"> saved events</span></a></li>
+        </ul>
+      </nav>
+      <button type="button" id="theme-toggle" class="btn btn-outline">Switch theme</button>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="section" aria-labelledby="register-title">
+      <h1 id="register-title">Register</h1>
+
+      <section id="summary" class="summary" tabindex="-1" aria-labelledby="summary-title" hidden>
+        <h2 id="summary-title">Registration summary</h2>
+        <p>Thank you! Your registration has been recorded.</p>
+        <dl id="summary-list"></dl>
+      </section>
+
+      <form id="register-form" action="#" method="post">
+        <div class="field">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" name="fullname" required minlength="3" autocomplete="name" aria-describedby="fullname-error">
+          <p class="error" id="fullname-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="email">University email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@university.edu.pk" aria-describedby="email-error">
+          <p class="error" id="email-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="regno">Registration number</label>
+          <input type="text" id="regno" name="regno" required pattern="F2026[0-9]{6}" placeholder="F2026123456" aria-describedby="regno-hint regno-error">
+          <p class="hint" id="regno-hint">Format: F2026 followed by 6 digits.</p>
+          <p class="error" id="regno-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="event">Event</label>
+          <select id="event" name="event" required aria-describedby="event-error">
+            <option value="">Choose an event</option>
+          </select>
+          <p class="error" id="event-error" hidden></p>
+        </div>
+
+        <fieldset>
+          <legend>Participation type</legend>
+          <label class="inline"><input type="radio" name="participation" value="individual" checked> Individual</label>
+          <label class="inline"><input type="radio" name="participation" value="team"> Team</label>
+        </fieldset>
+
+        <div class="field">
+          <label for="teamsize">Team size</label>
+          <input type="number" id="teamsize" name="teamsize" min="1" max="4" value="1" required aria-describedby="teamsize-hint teamsize-error">
+          <p class="hint" id="teamsize-hint">Individual: 1. Team: 2 to 4 members.</p>
+          <p class="error" id="teamsize-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="tshirt">T-shirt size</label>
+          <select id="tshirt" name="tshirt" required aria-describedby="tshirt-error">
+            <option value="">Choose a size</option>
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra large</option>
+          </select>
+          <p class="error" id="tshirt-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="inline"><input type="checkbox" id="terms" name="terms" required aria-describedby="terms-error"> I accept the terms and conditions</label>
+          <p class="error" id="terms-error" hidden></p>
+        </div>
+
+        <button type="submit" class="btn">Complete registration</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Computing Society, [YOUR UNIVERSITY]</p>
+      <ul class="nav-links">
+        <li><a href="https://github.com/YOUR-USERNAME">GitHub</a></li>
+        <li><a href="https://www.instagram.com/YOUR-SOCIETY">Instagram</a></li>
+        <li><a href="mailto:society@example.edu.pk">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/saved.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/register.js" defer></script>
+</body>
+</html>
