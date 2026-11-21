@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events | TechFest 2026</title>
+  <meta name="description" content="Browse TechFest 2026 competitions, workshops and talks. Search, filter by type or day and save events to your schedule.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">TechFest 2026</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="events.html">&#9733; <span id="saved-count">0</span><span class="visually-hidden"> saved events</span></a></li>
+        </ul>
+      </nav>
+      <button type="button" id="theme-toggle" class="btn btn-outline">Switch theme</button>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="section" aria-labelledby="events-title">
+      <h1 id="events-title">Events</h1>
+
+      <div class="controls">
+        <div class="field">
+          <label for="search">Search by title</label>
+          <input type="search" id="search" placeholder="e.g. workshop">
+        </div>
+        <div class="field">
+          <label for="type-filter">Type</label>
+          <select id="type-filter">
+            <option value="all">All types</option>
+            <option value="competition">Competition</option>
+            <option value="workshop">Workshop</option>
+            <option value="talk">Talk</option>
+          </select>
+        </div>
+        <fieldset class="day-filter">
+          <legend>Day</legend>
+          <label class="inline"><input type="radio" name="day" value="all" checked> All days</label>
+          <label class="inline"><input type="radio" name="day" value="1"> Day 1</label>
+          <label class="inline"><input type="radio" name="day" value="2"> Day 2</label>
+        </fieldset>
+      </div>
+
+      <p id="result-count" class="muted" aria-live="polite"></p>
+      <p id="empty-message" class="empty" hidden>No events found</p>
+      <ul id="event-grid" class="event-grid"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Computing Society, [YOUR UNIVERSITY]</p>
+      <ul class="nav-links">
+        <li><a href="https://github.com/YOUR-USERNAME">GitHub</a></li>
+        <li><a href="https://www.instagram.com/YOUR-SOCIETY">Instagram</a></li>
+        <li><a href="mailto:society@example.edu.pk">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/saved.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/events.js" defer></script>
+</body>
+</html>
